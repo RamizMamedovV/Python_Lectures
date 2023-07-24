@@ -39,6 +39,6 @@ for _ in range(100):
         array_pred.append(random.choice([True, False]))
         array_pred_not.append(not array_pred[i])
     for i in range(len(array_pred)):
-        print(not(array_pred[i]) == array_pred_not[i])
+        print(not(array_pred[i]) == array_pred_not[i])  
 
 print(time.time() - start)
