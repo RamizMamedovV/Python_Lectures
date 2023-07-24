@@ -1,4 +1,4 @@
-# List Списки
+                                            # List Списки
 # list_1 = []
 # list_2 = list()
 # print(list_1, list_2)        # [] []
@@ -20,7 +20,11 @@
 # print(list[:2])                 # 1 2
 # print(list[::2])                 # 1 88
 
-# TUPLE   КОРТЕЖ - неизменяемый список
+
+
+
+                            # TUPLE   КОРТЕЖ - неизменяемый список
+
 # t = ()                              # created type <class 'tuple'>
 # t1 = (1,)                           # <class 'tuple'>
 # print(type(t1))
@@ -62,7 +66,8 @@ print(d1.items())                   # dict_items([('key', 'key1'), ('keyDict', {
 
 
 
-# SET МНОЖЕСТВА - уникалные элем-ты, не упорядоченные. содержат любые типы. 
+                                # SET МНОЖЕСТВА - уникалные элем-ты, 
+# не упорядоченные. содержат любые типы. 
 # возможно 2 множества операции: обединять, пересечение, разность!
 
 # s = set()                                   # create a set()
@@ -95,7 +100,8 @@ print(d1.items())                   # dict_items([('key', 'key1'), ('keyDict', {
 
 
 
-# LIST COMPREHENSION ГЕНЕРАТОР СПИСКОВ - упрощен. подход к созданию списков исп-уя for, if-else
+                            # LIST COMPREHENSION ГЕНЕРАТОР СПИСКОВ - упрощен. 
+                            # подход к созданию списков исп-уя for, if-else
 # list = [i for i in range(1, 100)]           # [1, 2, .....98, 99]
 # list = [i for i in range(1, 100) if i % 2 == 0]           # [2, 4, .....98]
 # list = [(i, i) for i in range(1, 100) if i % 2 == 0]           # [(2, 2), (4, 4), .....(98, 98)] tuples
