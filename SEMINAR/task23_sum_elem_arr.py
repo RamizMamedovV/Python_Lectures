@@ -23,4 +23,4 @@ for i in range(len(array)-1):
     if array[i+1] > array[i]:
         count += 1
 
-print(count)
+print(f"Количество элементов массива, больших предыдущего = {count}")
