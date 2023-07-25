@@ -3,14 +3,19 @@
 # list_2 = list()
 # print(list_1, list_2)        # [] []
 # list_1 = [1, 2, 3, 4]
-# print(*list_1)              # 1 2 3 4 (*) - without []        
+# print(*list_1)              # 1 2 3 4 (*) - without []  
+      
 # for i in list_1:
 #    print(i)                # 1 2 3 4
 #    print(len(list_1))
 
+# for i,v in enumerate(list_1):           # распечатает ключ и значение
+#     print(i, v)
+
 # to add and del elem
 # list = [1, 2]
 # list.append(8)              # added element in the end of the list [1, 2, 8]
+# list.extend([5,7])          # extends with the new list
 # print(list)
 # print(list.pop())           # delete and return the last elem (if did not specified) pop(2) - second elem
 # print(list)
@@ -74,6 +79,7 @@ print(d1.items())                   # dict_items([('key', 'key1'), ('keyDict', {
 # colors = {'red', 'green', 'blue'}         #  # type: <class 'set'>
 # colors.add('red')                           # {'red', 'green', 'blue'}  DO NOT ADD
 # colors.add('grey')                          # {'red', 'blue', 'grey', 'green'} ADDED
+# print(red in colors)                        # True если содержит
 # colors.remove('red')                        # removed
 # colors.remove('red')                        # KeyError если нет элкмкнта, ВЫДАСТ ОШИБКУ
 # colors.discard('red')                        # УДАЛИТ, НО если нет элкмкнта, то не выдаст ошибку
