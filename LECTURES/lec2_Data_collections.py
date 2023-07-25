@@ -44,7 +44,10 @@
 # for i in range(len(t2)):
 #     print(t2[i])                            # 1 2 3
 
-# DICTIONARY  СЛОВАРИ - неупорядоченные, с доступом по ключу
+
+
+
+                        # DICTIONARY  СЛОВАРИ - неупорядоченные, с доступом по ключу
 # d = {}                              # <class 'dict'>
 # d1 = dict()                         # <class 'dict'>
 # d['clue'] = 'CLUE'

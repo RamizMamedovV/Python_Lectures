@@ -8,3 +8,19 @@ Output: 2 (-1 < 5, 2 < 3)
 Примечание: Пользователь может вводить значения
 списка или список задан изначально.
 """
+
+import random
+
+array = []
+count = 0
+
+for i in range(7):
+    array.append(random.randint(0, 7))
+
+print(array)
+
+for i in range(len(array)-1):
+    if array[i+1] > array[i]:
+        count += 1
+
+print(count)
