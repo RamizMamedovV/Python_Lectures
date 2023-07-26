@@ -18,7 +18,6 @@ desired_num = int(input("Введите искомое число: "))
 
 array = []
 closest_arr = []
-# count = 0
 
 for i in range(length):
     array.append(random.randint(0, 50))
@@ -28,7 +27,6 @@ for i in range(length):
     closest_arr.append(desired_num - array[i])
     closest_arr[i] = abs(closest_arr[i])
 
-flag = True
 for i in range(len(closest_arr)):
     if min(closest_arr) == closest_arr[i]:
         print(f"самый близкий = {array[i]}")
@@ -37,5 +35,3 @@ for i in range(len(closest_arr)):
 
 
 print(array)
-# print(closest_arr)
-# print(f"Количество элементов {desired_num} в массиве = {count}")
