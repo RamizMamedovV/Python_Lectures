@@ -15,21 +15,18 @@
 """
 #      Ваня:
 # n = int(input())
-# max_number = 1000
+# max_number = n
 # while n != 0:
 #     n = int(input())
-#     if max_number > n:
+#     if max_number < n:
 #         max_number = n
 # print(max_number)
 
 #       Петя:
 # n = int(input())
 # max_number = -1
-# while n < 0:
-#     print(f"max_number = {max_number}")
-#     print(f"n = {n}")
+# while n != 0:
 #     n = int(input())
 #     if max_number < n:
-#         n = max_number
-# print(n) 
-
+#         max_number = n
+# print(max_number) 
