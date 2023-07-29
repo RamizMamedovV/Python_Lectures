@@ -33,14 +33,3 @@
 #         n = max_number
 # print(n) 
 
-def g_s(array):
-    if len(array) <= 1:
-        return array
-    else:
-        pivot = array[0]
-    less = [i for i in array[1:] if i <= pivot]
-    more = [i for i in array[1:] if i > pivot]
-
-    return g_s(less) + [pivot] + g_s(more)
-
-print(g_s([10, 2, 5]))
