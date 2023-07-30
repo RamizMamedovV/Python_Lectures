@@ -9,10 +9,18 @@ import random
 
 def equation(coef: int, deg: int) -> str:
     if deg == 0:
+        # if coefficients[coef] != 0:
         return f"{coefficients[coef]} = 0"
+        # else:
+        #     return f" = 0"
+
     else:
         if deg == 1:
-            return f"{coefficients[coef]}*x + " + equation(coef + 1, deg - 1)
+            if coefficients[coef] != 0:
+                return f"{coefficients[coef]}*x + " + equation(coef + 1, deg - 1)
+            else:
+                return equation(coef + 1, deg - 1)
+
         elif coefficients[coef] == 1:
             return f"x^{deg} + " + equation(coef + 1, deg - 1)
         elif coefficients[coef] == 0:
@@ -25,7 +33,7 @@ degree = int(input("Введите степень: "))
 
 coefficients = []
 for i in range(degree + 1):
-    coefficients.append(random.randint(0, 5))
+    coefficients.append(random.randint(0, 8))
 
 # index = 0
 print(coefficients)
