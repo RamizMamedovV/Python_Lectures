@@ -66,4 +66,3 @@ def user_enter():
 
 
 user_enter()
-print(bin(10))

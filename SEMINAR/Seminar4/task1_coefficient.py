@@ -6,27 +6,7 @@
 К = 2 -> 2 * X^2 + 4 * X + 5 = 0 or X^2 + 5 = 0 or 10 * X^2 = 0
 """
 import random
-
-def equation(coef: int, deg: int) -> str:
-    if deg == 0:
-        # if coefficients[coef] != 0:
-        return f"{coefficients[coef]} = 0"
-        # else:
-        #     return f" = 0"
-
-    else:
-        if deg == 1:
-            if coefficients[coef] != 0:
-                return f"{coefficients[coef]}*x + " + equation(coef + 1, deg - 1)
-            else:
-                return equation(coef + 1, deg - 1)
-
-        elif coefficients[coef] == 1:
-            return f"x^{deg} + " + equation(coef + 1, deg - 1)
-        elif coefficients[coef] == 0:
-            return equation(coef + 1, deg - 1)
-        else:
-            return f"{coefficients[coef]}*x^{deg} + " + equation(coef + 1, deg - 1)
+from equations import *
     
 
 degree = int(input("Введите степень: "))
@@ -35,9 +15,8 @@ coefficients = []
 for i in range(degree + 1):
     coefficients.append(random.randint(0, 8))
 
-# index = 0
 print(coefficients)
-print(equation(0, degree))
+print(equation(0, degree, coefficients))
 
 
 
