@@ -13,8 +13,10 @@ degree = int(input("Введите степень: "))
 
 coefficients = []
 for i in range(degree + 1):
-    coefficients.append(random.randint(0, 8))
+    coefficients.append(random.randint(-10, 10))
 
+print(coefficients)
+print(format_list(coefficients))
 print(coefficients)
 print(equation(0, degree, coefficients))
 
