@@ -21,9 +21,3 @@ def format_list(nums: list):
         if nums[i] > 0:
             nums[i] = f"+ {nums[i]}"
 
-# list_2 = [1, 2, 3]
-# res_list = [4, 5, 6, 7, 9]
-# for a, i in zip(reversed(list_2), reversed(range(len(res_list)))):
-#     res_list[i] += a
-
-# print(res_list)

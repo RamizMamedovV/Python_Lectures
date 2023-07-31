@@ -29,22 +29,31 @@ def sum_coefs(list_1, list_2):
 
 
 deg_1 = int(input("Введите степень первого многочлена: "))
-
 coeffs_1 = []
 for i in range(deg_1 + 1):
     coeffs_1.append(int(input(f"Введите его коэффициенты (можно с '-') номер {i}: ")))
+coeffs1_copy = coeffs_1.copy()
+print()
 
 deg_2 = int(input("Введите степень первого многочлена: "))
-
 coeffs_2 = []
 for i in range(deg_2 + 1):
     coeffs_2.append(int(input(f"Введите его коэффициенты (можно с '-') номер {i}: ")))
+coeffs2_copy = coeffs_2.copy()
+print()
 
 res_coefs = sum_coefs(coeffs_1, coeffs_2)
 res_deg = max(deg_1, deg_2)
-print(res_coefs)
-print(res_deg)
+# print(res_coefs)
+# print(res_deg)
 
 format_list(res_coefs)
-print(res_coefs)
+# print(res_coefs)
+
+format_list(coeffs1_copy)
+print(equation(0, deg_1, coeffs1_copy))
+print("+")
+format_list(coeffs2_copy)
+print(equation(0, deg_2, coeffs2_copy))
+print("=")
 print(equation(0, res_deg, res_coefs))
