@@ -63,3 +63,53 @@ Output:
 #     return quick_sort(less) + [pivot] + quick_sort(more)
 
 # print(quick_sort([10, 2, 5]))
+
+"""
+seminar 6
+from random import randint
+def find_and_square(sp):
+    result = []
+    for item in sp:
+        if item > 4:
+            result.append(item**2)
+    return result
+
+
+
+sp = [5, 8, 1, 3, 10, 0]
+print(find_and_square(sp))
+print([x**2 for x in sp if x > 4])
+rsp = [randint(0,11) for _ in range(10)]
+print(rsp)
+
+#надо найти все элементы больше 4 ,
+# далее получить новый список с квадратами таких элементов
+# s2 = sp[::]
+# print(s2)
+# sp.append(888)
+# print(s2)
+"""
+
+"""
+def sum_count(sp):
+    total = 0
+    for item in sp:
+        # if str(type(item)) == "<class 'list'>" :
+        # if type(item) == type([]):
+        if isinstance(item,list):
+            total = total + sum_count(item)
+        else:
+            total += item
+    return total
+
+
+
+count_angola = 18
+count_new_york = [20, [10, 7]]
+count_chicago = 15
+count_usa = [count_new_york, count_chicago]
+count_all = [count_angola, count_usa]
+print(count_all)
+print(type(count_all))
+print(sum_count(count_all))
+"""
