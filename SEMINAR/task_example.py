@@ -90,7 +90,9 @@ print(rsp)
 # print(s2)
 """
 
-"""
+
+
+"""                               #       if isinstance(item,list)
 def sum_count(sp):
     total = 0
     for item in sp:
