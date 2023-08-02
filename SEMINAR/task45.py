@@ -18,18 +18,45 @@
 300                             220 284
 """
 
-def sum_div(num,res = 0, start = 1):
-    if start > num - num // 2 or num == 1:
-        return res
-    else:
-        if num % start == 0:
-            res += start
-        return sum_div(num, res, start + 1)
+
+#                    Этот метод заполняет стек!!!
+
+
+# def sum_div(num,res = 0, start = 1):
+#     if start > num - num // 2 or num == 1:
+#         return res
+#     else:
+#         if num % start == 0:
+#             res += start
+#         return sum_div(num, res, start + 1)
     
 
+# num_1 = int(input("Введите число больше 3-х: "))
+# for i in range(4, num_1):
+#     temp_1 = sum_div(i)
+#     temp_2 = sum_div(temp_1)
+#     if temp_2 == i:
+#         print(f"{i} == {temp_1}")
+
+
+
+#                           этот метод супер!!!
+
+
+def sum_div(num):
+    res = 0
+    for start in range(1, num // 2 + 1):
+        if num % start == 0:
+            res += start
+    return res
+
 num_1 = int(input("Введите число больше 3-х: "))
-for i in range(220, 284):
+res = {}
+
+for i in range(4, num_1):  
     temp_1 = sum_div(i)
     temp_2 = sum_div(temp_1)
-    if temp_2 == i:
-        print(f"{i} == {temp_1}")
+    if i == temp_2 and temp_1 != i and i < temp_1:
+        res[temp_1] = temp_2
+        print(f"{temp_2} == {temp_1}")
+       
