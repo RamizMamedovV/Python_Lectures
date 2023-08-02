@@ -28,8 +28,8 @@ def sum_div(num,res = 0, start = 1):
     
 
 num_1 = int(input("Введите число больше 3-х: "))
-for i in range(4, num_1 + 1):
+for i in range(220, 284):
     temp_1 = sum_div(i)
     temp_2 = sum_div(temp_1)
-    if temp_1 == i:
-        print(f"{temp_1} == {i}")
+    if temp_2 == i:
+        print(f"{i} == {temp_1}")
