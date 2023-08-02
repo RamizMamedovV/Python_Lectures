@@ -20,5 +20,5 @@ def fibonacci(num):
         return num
     return fibonacci(num - 1) + fibonacci(num - 2)
 
-num = 2
+num = 5
 print(f"fibonacci {num}-й = {fibonacci(num)}")
