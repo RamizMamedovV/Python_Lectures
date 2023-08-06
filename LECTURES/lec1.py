@@ -1,6 +1,6 @@
-# print("ctrl + f5")
+# print("ctrl + f5")                #для запуска последней кода python
 # print("<-")
-# print("python lec1.py")
+# print("python lec1.py")                 #для запуска кода python
 # print(5, 6, 5) # 5 6 5
 """  закоментить кусок кода
 # # ctrl + k ; ctrl + c # закоментить

@@ -15,9 +15,10 @@
 # to add and del elem
 # list = [1, 2]
 # list.append(8)              # added element in the end of the list [1, 2, 8]
-# list.extend([5,7])          # extends with the new list
+# list.extend([5,7])          # extends with the new list [1, 2, 8, 5, 7] вместо append
 # print(list)
-# print(list.pop())           # delete and return the last elem (if did not specified) pop(2) - second elem
+# print(list.pop())           # delete and return the last elem (if did not specified) 
+#                                                                # pop(2) - second elem
 # print(list)
 # list.insert(2, 88)             # add an elem (88) to the 2 posicion 
 # print(list)
@@ -102,7 +103,10 @@ print(d1.items())                   # dict_items([('key', 'key1'), ('keyDict', {
 # x, y, z = i
 # print(x, y, z)
 
-# FROZENSET ЗАМОРОЖЕННОЕ МНОЖЕСТВО
+
+
+#                                   FROZENSET ЗАМОРОЖЕННОЕ МНОЖЕСТВО
+
 # a = {1, 2, 3}
 # f = frozenset(a)                        # frozenset({1, 2, 3})
 # print(f)
@@ -114,5 +118,5 @@ print(d1.items())                   # dict_items([('key', 'key1'), ('keyDict', {
 # list = [i for i in range(1, 100)]           # [1, 2, .....98, 99]
 # list = [i for i in range(1, 100) if i % 2 == 0]           # [2, 4, .....98]
 # list = [(i, i) for i in range(1, 100) if i % 2 == 0]           # [(2, 2), (4, 4), .....(98, 98)] tuples
-list = [i * i for i in range(1, 10) if i % 2 == 0]           # [4, 16, 36, 64] 
-print(list)
+# list = [i * i for i in range(1, 10) if i % 2 == 0]           # [4, 16, 36, 64] 
+# print(list)
