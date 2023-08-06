@@ -40,23 +40,50 @@
 
 
 
-#                           этот метод супер!!!
+#                           мой лучший метод!!!
 
+# def sum_div(num):
+#     res = 0
+#     for start in range(1, num // 2 + 1):
+#         if num % start == 0:
+#             res += start
+#     return res
 
-def sum_div(num):
-    res = 0
-    for start in range(1, num // 2 + 1):
+# num_1 = int(input("Введите число больше 3-х: "))
+# res = {}
+
+# for i in range(4, num_1):  
+#     temp_1 = sum_div(i)
+#     temp_2 = sum_div(temp_1)
+#     if i == temp_2 and temp_1 != i and i < temp_1:
+#         res[temp_1] = temp_2
+#         print(f"{temp_2} == {temp_1}")
+       
+
+#                           метод коллег учшее
+
+def sum_div1(num):
+    res = 1
+    for start in range(2, int(num ** 0.5) + 1):
         if num % start == 0:
             res += start
+            if start != num // start:
+                res += num // start
     return res
 
-num_1 = int(input("Введите число больше 3-х: "))
-res = {}
+def find_frendly_numbers(num) -> list[tuple[int, int]]:
+    frendly_pairs = []
 
-for i in range(4, num_1):  
-    temp_1 = sum_div(i)
-    temp_2 = sum_div(temp_1)
-    if i == temp_2 and temp_1 != i and i < temp_1:
-        res[temp_1] = temp_2
-        print(f"{temp_2} == {temp_1}")
-       
+    for n in range(1, num + 1):
+        m = sum_div1(n)
+
+        if m < n and sum_div1(m) == n :
+            pair = (n , m)
+            frendly_pairs.append(pair)
+    return frendly_pairs
+
+num1 = int(input("Введите число: "))
+pairs = find_frendly_numbers(num1)
+
+for pair in pairs:
+    print(pair[0], pair[1])
