@@ -8,11 +8,22 @@
 Вывод: 7 9 11 13 15
 """
 
+#               Оформлять всё через функции! это обязательное условие)))
+
+def arithmetic_progression(start = 0, step = 2, amount = 10):
+    array = []
+    stop = amount * step + start
+    for i in range(start, stop, step):
+        array.append(i)
+    return array
+
 start = int(input("Введите начало: "))
 step = int(input("Введите шаг: "))
 amt = int(input("Введите кол-во элем-ов: "))
 
-stop = amt * step + start
-arr = [x for x in range(start, stop, step)]
+print(arithmetic_progression(start, step, amt))
 
-print(arr)
+# stop = amt * step + start
+# arr = [x for x in range(start, stop, step)]
+
+# print(arr)
