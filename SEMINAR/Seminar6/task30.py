@@ -23,6 +23,7 @@ amt = int(input("Введите кол-во элем-ов: "))
 
 print(arithmetic_progression(start, step, amt))
 
+#                           second way
 # stop = amt * step + start
 # arr = [x for x in range(start, stop, step)]
 
