@@ -1,4 +1,5 @@
-def str_list_to_num_list(sorce_str_list: list, des_num_list: list) ->list:
+def str_list_to_num_list(sorce_str_list: list) ->list:
+    des_num_list = []
     j = 0
     while j < len(sorce_str_list) - 1:
         a = ''
@@ -11,3 +12,11 @@ def str_list_to_num_list(sorce_str_list: list, des_num_list: list) ->list:
                 j += 1
         des_num_list.append(int(a))
     return des_num_list
+
+def choose_nums(string: str):
+    temp_list = string[:]
+    for i in range(len(temp_list)):
+        if temp_list[i] in '*-+/()':
+            temp = temp_list[i]
+            temp_list = temp_list.replace(temp, ' ')
+    return temp_list
