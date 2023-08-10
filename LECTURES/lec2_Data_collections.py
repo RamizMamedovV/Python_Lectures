@@ -120,3 +120,8 @@ print(d1.items())                   # dict_items([('key', 'key1'), ('keyDict', {
 # list = [(i, i) for i in range(1, 100) if i % 2 == 0]           # [(2, 2), (4, 4), .....(98, 98)] tuples
 # list = [i * i for i in range(1, 10) if i % 2 == 0]           # [4, 16, 36, 64] 
 # print(list)
+
+
+l = [1, 2, 3]
+for i in reversed(l):
+    print(i)

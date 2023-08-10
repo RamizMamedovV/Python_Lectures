@@ -13,42 +13,55 @@
     1+2*3 => 7; 
     (1+2)*3 => 9;
 """
-#               Находится на стадии разработки!!!))))
+#       user = '-1*12*(40+(20 + 81 / 2))*(2+ 4)'
 
-# exercise = '3+2*4*(5+65)'
-# p = '*'
-# d = '/'
-# s = '+'
-# m = '-'
-# br_l = '('
-# br_r = ')'
-# priority1 = ''
-# delet = ''
-# res = ''
-# if br_l in exercise:
-#     delet = exercise[exercise.index(br_l):exercise.index(br_r) + 1]
-#     for i in exercise[exercise.index(br_l) + 1:exercise.index(br_r)].split():
-#         priority1 += i
-#     if s in priority1:
-#         res = int(priority1[0]) + int(priority1[2:])
-#         print(res)
-# exercise = exercise.replace(str(delet), str(res))
-# if p in exercise:
-#     delet = exercise[exercise.index(p)-1 : exercise.index(p) + 2]
-#     if p in delet:
-#         res = int(delet[0]) * int(delet[2])
-#         print(res)
-# exercise = exercise.replace(str(delet), str(res))
-# if p in exercise:
-#     delet = exercise[exercise.index(p)-1 : exercise.index(p) + 2]
-#     if p in delet:
-#         res = int(delet[0]) * int(delet[2])
-#         print(res)
-# exercise = exercise.replace(str(delet), str(res))
-# if s in exercise:
-#     delet = exercise[exercise.index(s)-1 : exercise.index(s) + 2]
-#     if s in delet:
-#         res = int(delet[0]) + 560
-#         print(res)
-# exercise = exercise.replace(str(delet), str(res))
-# print(exercise)
+def do_solve(nums: list, marks: list):
+    right = nums.pop()
+    mark = marks.pop()
+
+    if len(nums) > 0:
+        left = nums.pop()
+    else:
+        left = 0
+
+    if mark == '*':
+        nums.append(left * right)
+    elif mark == '/':
+        nums.append(left / right)
+    elif mark == '+':
+        nums.append(left + right)
+    elif mark == '-':
+        nums.append(left - right)
+
+
+def select_str(string: str) -> list:
+    marks = []
+    nums = []
+    i = 0
+
+    while i < len(string):
+        if string[i] == ' ':
+            i += 1
+        elif string[i] in '*/-+=(':
+            marks += string[i]
+            i += 1
+        elif string[i] == ')':
+            while marks[-1] != '(':
+                do_solve(nums, marks)
+            marks.pop()
+            i += 1
+        else:
+            j = i
+            num = ''
+            while j < len(string) and string[j] not in '*/()+-' and string[j] != ' ':
+                num += string[j]
+                j += 1
+            nums.append(int(num))
+            i = j 
+    while marks:
+        do_solve(nums, marks)
+    
+    return nums
+
+user = '-1*12*(40+(20 + 80 / 2))*(2+ 4)'
+print(select_str(user))
