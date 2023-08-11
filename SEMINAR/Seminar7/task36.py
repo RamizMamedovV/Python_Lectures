@@ -26,12 +26,14 @@ def print_operation_table(operation, rows = 6, columns = 6):
 
     for i in range(1, rows + 1):
         row = []
+        j = i
         for j in range(1, columns + 1):
             res = operation(i, j)
+            res = operation(j, i)
             row.append(res)
         print(*row)  
 
 def make_operation(x, y):
     return x * y
 
-print_operation_table(make_operation, 7,7)
+print_operation_table(make_operation, 8,7)
