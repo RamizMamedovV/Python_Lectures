@@ -8,6 +8,21 @@
 записи(Например имя или фамилию человека)
 4. Использование функций. Ваша программа не должна быть линейной
 """
+# from collections import OrderedDict
+#               не получилось отсортировать словарь после удаления
+
+    # keys_ph_dic = sorted(ph_dic.keys())
+    # sorted_ph_dic = {}
+    # len_ph_dic = len(ph_dic)
+    # for i in range(len_ph_dic):
+    #     sorted_ph_dic[i] = ph_dic[keys_ph_dic[i - 1]]
+    # ph_dic = sorted_ph_dic
+    # sorted_ph_dic = OrderedDict()
+
+    # sorted_keys = sorted(ph_dic.keys())
+    # for key in sorted_keys:
+    #     sorted_ph_dic[key] = ph_dic[key]
+    # ph_dic = sorted_ph_dic
 
 #                       куски кода из урока
 

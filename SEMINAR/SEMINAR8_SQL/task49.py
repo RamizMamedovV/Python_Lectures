@@ -8,8 +8,6 @@
 записи(Например имя или фамилию человека)
 4. Использование функций. Ваша программа не должна быть линейной
 """
-from collections import OrderedDict
-
 
 def save_contacts(ph_book : dict, file_name):
     with open(file_name, 'w') as file:
@@ -53,8 +51,6 @@ def print_contacts(ph_dict : dict):
 
 def del_contact(keys_to_del : list):
     for i in range(len(keys_to_del)):
-        # if deleted:
-        # for i in keys_to_del:
         del ph_dic[keys_to_del[i]]
 
 
@@ -77,21 +73,6 @@ def search_contact(ph_dic : dict, deleted: bool = False):
                 else:
                     return
     del_contact(keys_to_del)
-
-#               не получилось отсортировать словарь после удаления
-
-    # keys_ph_dic = sorted(ph_dic.keys())
-    # sorted_ph_dic = {}
-    # len_ph_dic = len(ph_dic)
-    # for i in range(len_ph_dic):
-    #     sorted_ph_dic[i] = ph_dic[keys_ph_dic[i - 1]]
-    # ph_dic = sorted_ph_dic
-    # sorted_ph_dic = OrderedDict()
-
-    # sorted_keys = sorted(ph_dic.keys())
-    # for key in sorted_keys:
-    #     sorted_ph_dic[key] = ph_dic[key]
-    # ph_dic = sorted_ph_dic
 
 
 def write_contacts(ph_dic : dict):
@@ -133,5 +114,3 @@ file_name = "ph_book.txt"
 ph_dic = {}
 ph_dic = load_from_file(file_name)
 user(ph_dic, file_name)
-# for k, v in ph_dic.items():
-#     print(k, v)
