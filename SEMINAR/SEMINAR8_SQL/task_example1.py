@@ -78,6 +78,7 @@ def search_contact(ph_dic : dict, deleted: bool = False):
                     return
     del_contact(keys_to_del)
 
+#               не получилось отсортировать словарь после удаления
 
     # keys_ph_dic = sorted(ph_dic.keys())
     # sorted_ph_dic = {}
