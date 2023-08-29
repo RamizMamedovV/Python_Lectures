@@ -1,3 +1,19 @@
+"""
+5 Добавьте виджет со списком
+6 Добавьте виджет Checkbutton (флажок Tkinter)
+6.1 Установка состояния проверки кнопки Check
+7. Добавьте виджеты переключателей
+7.1 Получить значение переключателя (выбранный переключатель)
+8. Добавьте виджет ScrolledText (текстовое поле Tkinter)
+8.1 Настройка содержимого прокручиваемого текста
+8.2 Удаление/очистка содержимого прокручиваемого текста
+9. Создайте окно сообщения
+9.1 Отображение предупреждений и сообщений об ошибках
+9.2 Отображение диалоговых окон с вопросами
+10. Добавьте SpinBox (виджет чисел)
+10.1 Установите значение по умолчанию для Spinbox
+"""
+
 from tkinter import *
 
 from tkinter import scrolledtext
@@ -137,6 +153,14 @@ res = messagebox.askretrycancel('Message title','Message retry cancel')
 #                       Add a SpinBox (numbers widget)
 spin = Spinbox(window, from_=0, to=100, width=15) # задаём с шириной width=15
 spin.grid(column=1,row=4)
+spin1 = Spinbox(window, values=(3, 8, 11), width=5)
+spin1.grid(column=1,row=5) # Здесь виджет Spinbox показывает только эти 3 числа: 3, 8 и 11.
+
+# Чтобы установить значение по умолчанию для Spinbox, вы можете передать значение параметру textvariable следующим образом:
+var =IntVar()
+var.set(36)
+spin2 = Spinbox(window, from_=0, to=100, width=15, textvariable=var)
+spin2.grid(column=1,row=6)
 
 
 window.mainloop()
