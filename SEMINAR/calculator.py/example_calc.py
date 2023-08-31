@@ -17,6 +17,22 @@ def add_operand(operand):
     calc.insert(0, val + operand)
 
 
+def make_operand_C():
+    calc.delete(0, END)
+    calc.insert(0, '0')
+
+
+def make_calc():
+    val = calc.get()
+    if val[-1] in '+-/*':
+        val = val + val[:-1]
+    elif val[0] in '/*':
+        make_operand_C()
+        return
+    calc.delete(0, END)
+    calc.insert(0, eval(val))
+
+
 def make_digit_button(digit):
     return Button(
         text=digit, bd=5, font=("Arial", 15), command=lambda: add_digit(digit)
@@ -31,7 +47,13 @@ def make_operand_button(operand):
 
 def make_calc_button(operand):
     return Button(
-        text=operand, bd=5, font=("Arial", 15), fg="red", command=lambda: make_calc(operand)
+        text=operand, bd=5, font=("Arial", 15), fg="red", command=make_calc
+    )
+
+
+def make_C_button(operand):
+    return Button(
+        text=operand, bd=5, font=("Arial", 15), fg="red", command=make_operand_C
     )
 
 
@@ -59,10 +81,11 @@ make_operand_button("*").grid(column=3, row=1, sticky="wesn", padx=3, pady=3)
 make_operand_button("/").grid(column=3, row=2, sticky="wesn", padx=3, pady=3)
 make_operand_button("-").grid(column=3, row=3, sticky="wesn", padx=3, pady=3)
 make_operand_button("+").grid(column=3, row=4, sticky="wesn", padx=3, pady=3)
+make_operand_button(".").grid(column=2, row=5, sticky="wesn", padx=3, pady=3)
 
 make_calc_button("=").grid(column=3, row=5, sticky="wesn", padx=3, pady=3)
 
-make_operand_button(".").grid(column=2, row=5, sticky="wesn", padx=3, pady=3)
+make_C_button("C").grid(column=0, row=1, sticky="wesn", padx=3, pady=3)
 
 win.columnconfigure(0, minsize=60)
 win.columnconfigure(1, minsize=60)
